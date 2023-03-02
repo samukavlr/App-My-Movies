@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "857786010526",
+    "project_id": "myappfilmes-45ffe",
+    "storage_bucket": "myappfilmes-45ffe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857786010526:android:962261546c2c556611e48f",
+        "android_client_info": {
+          "package_name": "appmymovies.com.br"
+        }
+      },
+      "oauth_client": [
+        {gis
+          "client_id": "857786010526-p7ficbd46046jtugsiop94c93s8iutaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJaMHWbFqKqh0i0fQFXfoJw1cJm1bUtgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857786010526-p7ficbd46046jtugsiop94c93s8iutaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

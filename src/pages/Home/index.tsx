@@ -5,15 +5,12 @@ import {
     SearchContainer,
     Input,
     SearchButton,
-    Title,
-    Banner,
-    BannerButton,
-    SliderMovie,
+   
     Loading
 } from './styles';
 
 import Header from '../../components/Header';
-import SliderItem from '../../components/SliderItem';
+
 
 import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
@@ -125,7 +122,7 @@ export default function Home() {
 
     return (
         <Container>
-            <Header title="React Prime" />
+            <Header title="APP FILMES" />
             <SearchContainer>
                 <Input
                     placeholder="Ex Vingadores"
@@ -139,44 +136,7 @@ export default function Home() {
             </SearchContainer>
 
             <ScrollView>
-                <Title>
-                    Em Cartaz
-                </Title>
-                <BannerButton activeOpacity={0.9} onPress={() => navigateDetailPage(bannerMovie)}>
-                    <Banner
-                        resizeMethod="resize"
-                        source={{ uri: `https://image.tmdb.org/t/p/original/${bannerMovie.poster_path}` }}
-                    />
-                </BannerButton>
-
-                <SliderMovie<React.ElementType>
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={nowMovies}
-                    renderItem={({ item }: { item: MoviesProps }) =>
-                        <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
-                    keyExtractor={(item: MoviesProps) => String(item.id)}
-                />
-
-                <Title>Populares</Title>
-                <SliderMovie<React.ElementType>
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={popularMovies}
-                    renderItem={({ item }: { item: MoviesProps }) =>
-                        <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
-                    keyExtractor={(item: MoviesProps) => String(item.id)}
-                />
-
-                <Title>Mais votados</Title>
-                <SliderMovie<React.ElementType>
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={topMovies}
-                    renderItem={({ item }: { item: MoviesProps }) =>
-                        <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
-                    keyExtractor={(item: MoviesProps) => String(item.id)}
-                />
+               
             </ScrollView>
         </Container>
     )
