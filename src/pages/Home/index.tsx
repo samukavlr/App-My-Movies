@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { ScrollView, ActivityIndicator, Alert } from 'react-native';
+import { ScrollView, ActivityIndicator } from 'react-native';
+import img from ',,/../../assets/samufilmesicon.png'
 import {
     Container,
     SearchContainer,
     Input,
     SearchButton,
-   
-    Loading
+    Loading,
+    Logo,
 } from './styles';
 
 import Header from '../../components/Header';
+
 
 
 import { Feather } from '@expo/vector-icons'
@@ -28,9 +30,9 @@ type MoviesProps = {
 
 export default function Home() {
 
-    const [nowMovies, setNowMovies] = useState<MoviesProps[]>([]);
-    const [popularMovies, setPopularMovies] = useState<MoviesProps[]>([]);
-    const [topMovies, setTopMovies] = useState<MoviesProps[]>([]);
+    // const [nowMovies, setNowMovies] = useState<MoviesProps[]>([]);
+    // const [popularMovies, setPopularMovies] = useState<MoviesProps[]>([]);
+    // const [topMovies, setTopMovies] = useState<MoviesProps[]>([]);
     const [loading, setLoading] = useState(true);
     const [bannerMovie, setBannerMovie] = useState<MoviesProps>({
         id: 0,
@@ -79,10 +81,10 @@ export default function Home() {
                 const popularList = getListMovies(5, popularData.data.results)
                 const topList = getListMovies(5, topData.data.results)
 
-                setBannerMovie(nowData.data.results[randomBanner(nowData.data.results)])
-                setNowMovies(nowList)
-                setPopularMovies(popularList)
-                setTopMovies(topList)
+                // setBannerMovie(nowData.data.results[randomBanner(nowData.data.results)])
+                // setNowMovies(nowList)
+                // setPopularMovies(popularList)
+                // setTopMovies(topList)
 
                 setLoading(false)
             }
@@ -122,10 +124,11 @@ export default function Home() {
 
     return (
         <Container>
-            <Header title="APP FILMES" />
+
+            <Header title="HOME" />
             <SearchContainer>
                 <Input
-                    placeholder="Ex Vingadores"
+                    placeholder="Digite o Filme"
                     placeholderTextColor="#DDD"
                     value={input}
                     onChangeText={(text: string) => setInput(text)}
@@ -134,6 +137,7 @@ export default function Home() {
                     <Feather name="search" size={38} color="#FFFFFF" />
                 </SearchButton>
             </SearchContainer>
+            <Logo source={img}></Logo>
 
             <ScrollView>
                

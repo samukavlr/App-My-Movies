@@ -1,15 +1,15 @@
 {
   "expo": {
     "name": "AppMyMovies",
-    "slug": "AppMyMovies",
+    "slug": "appmymovies",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/samufilmessplash5.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#141A29"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,14 +21,24 @@
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/samufilmesicon.png",
+        "backgroundColor": "#141A29"
+      },
+      "package": "com.appmovies"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
-
+    },
+    "plugins": [
+      "@react-native-firebase/app"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1e8c0bad-013b-4c0d-b5bf-58beefd63ecc"
+      }
+    },
+    "owner": "samukavlr"
   }
 }

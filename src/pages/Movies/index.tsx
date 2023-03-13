@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation, useIsFocused } from '@react-navigation/native'
-
 import Header from '../../components/Header'
-import { Container, ListMovies } from './styles';
+import { Container, ListMovies, img } from './styles';
 import { deleteMovie, getMoviesSave } from '../../utils/storage'
 import FavoriteItem from '../../components/FavoriteItem';
+
+
 
 export default function Movies() {
 
@@ -43,18 +44,21 @@ export default function Movies() {
 
     return (
         <Container>
-            <Header title="Meus filmes" />
+
+           
+            <Header title="FILMES FAVORITOS" />
 
             <ListMovies<React.ElementType>
                 data={movies}
                 keyExtractor={item => String(item.id)}
                 renderItem={({ item }) => (
                     <FavoriteItem data={item}
-                        deleteMovie={() => handleDeleteMovie(item.id)}
-                        navigatePage={() => navigateDetailPage(item)}
+                    deleteMovie={() => handleDeleteMovie(item.id)}
+                    navigatePage={() => navigateDetailPage(item)}
                     />
-                )}
-            />
+                    )}
+                    />
+          
         </Container>
 
     )

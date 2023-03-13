@@ -7,3 +7,9 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const ListMovies = styled.FlatList``;
+
+export const img = styled.Image`
+
+margin-top: 100%;
+
+`

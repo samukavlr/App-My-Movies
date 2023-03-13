@@ -20,6 +20,7 @@ import { api, key } from '../../services/api';
 import Genres from '../../components/Genres'
 import ModalLink from '../../components/ModalLink'
 import { saveMovie, hasMovie, deleteMovie } from '../../utils/storage'
+import img from ',,/../../assets/samufilmesicon.png'
 
 
 type MoviesProps = {
@@ -84,6 +85,7 @@ export default function Detail() {
         if (favoriteMovie) {
             await deleteMovie(movie.id)
             setFavoriteMovie(false);
+           
             Alert.alert('Aviso', 'Filme removido da sua lista')
             return
         } else {
@@ -96,6 +98,7 @@ export default function Detail() {
 
     return (
         <Container>
+
             <Header>
                 <HeaderButton>
                     <Feather name="arrow-left" size={28} color="#FFFFFF" onPress={() => navigation.goBack()} />
@@ -115,9 +118,9 @@ export default function Detail() {
                     uri: `https://image.tmdb.org/t/p/original/${movie.poster_path}`
                 }}
             />
-            <BannerLink onPress={() => setOpenLink(true)}>
+            {/* <BannerLink onPress={() => setOpenLink(true)}>
                 <Feather name="link" size={24} color="#FFFFFF" />
-            </BannerLink>
+            </BannerLink> */}
 
             <Title numberOfLines={2}>{movie.title}</Title>
 

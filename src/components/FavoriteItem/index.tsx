@@ -12,6 +12,7 @@ import {
 
 export default function FavoriteItem({ data, deleteMovie, navigatePage }) {
 
+   
     return (
         <Container>
             <Title size={22}>{data.title}</Title>

@@ -14,11 +14,11 @@ export default function Routes() {
                 headerShown: false, 
 
                 drawerStyle: {
-                    backgroundColor: '#090A0E',
+                    backgroundColor: '#5555563',
                     paddingTop: 20
                 },
 
-                drawerActiveBackgroundColor: '#E72F49',
+                drawerActiveBackgroundColor: '#0097B2',
                 drawerActiveTintColor: '#FFFFFF',
                 drawerInactiveTintColor: '#FFFFFF'
             }}
@@ -42,10 +42,10 @@ export default function Routes() {
                 name="Movies" 
                 component={Movies} 
                 options={{
-                    title: 'Meus filmes',
+                    title: 'Filmes Favoritos',
                     drawerIcon: ({focused, size, color}) => {
                         return <MaterialCommunityIcons
-                            name={focused ? 'archive' : 'archive-outline'}
+                            name={focused ? 'star' : 'star-outline'}
                             size={size}
                             color={color} />;
                     }
